@@ -1,0 +1,93 @@
+{
+  "entities": [
+    {
+      "name": "Project",
+      "created_at": false,
+      "updated_at": false,
+      "fields": [
+        {
+          "name": "name",
+          "type": "varchar",
+          "nullable": false
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "Task",
+      "created_at": false,
+      "updated_at": false,
+      "fields": [
+        {
+          "name": "title",
+          "type": "varchar",
+          "nullable": false
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "varchar",
+          "nullable": false
+        },
+        {
+          "name": "due_date",
+          "type": "date",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "Comment",
+      "created_at": false,
+      "updated_at": false,
+      "fields": [
+        {
+          "name": "content",
+          "type": "text",
+          "nullable": false
+        }
+      ]
+    },
+    {
+      "name": "Assignment",
+      "created_at": false,
+      "updated_at": false,
+      "fields": [
+        {
+          "name": "assigned_to",
+          "type": "varchar",
+          "nullable": false
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "Project",
+      "to": "Task",
+      "type": "OneToMany"
+    },
+    {
+      "from": "Task",
+      "to": "Comment",
+      "type": "OneToMany"
+    },
+    {
+      "from": "Task",
+      "to": "Assignment",
+      "type": "OneToMany"
+    }
+  ],
+  "_removedEntities": [],
+  "version": 2,
+  "rootFolder": "src",
+  "apiType": "Rest"
+}
