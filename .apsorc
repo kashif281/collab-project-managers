@@ -70,21 +70,7 @@
     }
   ],
   "relationships": [
-    {
-      "from": "Project",
-      "to": "Task",
-      "type": "OneToMany"
-    },
-    {
-      "from": "Task",
-      "to": "Comment",
-      "type": "OneToMany"
-    },
-    {
-      "from": "Task",
-      "to": "Assignment",
-      "type": "OneToMany"
-    }
+   
   ],
   "_removedEntities": [],
   "version": 2,
